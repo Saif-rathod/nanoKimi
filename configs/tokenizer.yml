@@ -1,0 +1,3 @@
+model_prefix: spm
+vocab_size: 50257
+model_type: bpe

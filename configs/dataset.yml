@@ -1,0 +1,4 @@
+tokenizer_type: sentencepiece
+vocab_size: 50257
+model_prefix: spm
+model_type: bpe

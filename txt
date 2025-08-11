@@ -1,0 +1,51 @@
+nanoKimi/
+│
+├── configs/
+│   ├── train.yaml                 # Main training config (batch size, lr, steps)
+│   ├── model.yaml                 # Model architecture config
+│   ├── dataset.yaml               # Dataset loading and preprocessing config
+│   ├── tokenizer.yaml             # Tokenizer settings
+│   └── benchmark.yaml             # Benchmark scenarios
+│
+├── data/
+│   ├── raw/                       # Raw datasets
+│   ├── processed/                 # Tokenized/clean datasets
+│   └── download.py                # Scripts for dataset download
+│
+├── nanoKimi/
+│   ├── __init__.py
+│   ├── config.py                   # Config loader (YAML → Python dict)
+│   ├── tokenizer.py                # Tokenizer (SentencePiece/txtFastBPE)
+│   ├── dataset.py                  # Dataloader + preprocessing
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── embedding.py            # Token + positional embeddings
+│   │   ├── attention.py            # Latent Attention + Rotary Positional Encoding
+│   │   ├── feedforward.py          # Gated Feedforward w/ SwiGLU
+│   │   ├── moe.py                  # Mixture of Experts Layer
+│   │   ├── block.py                # Transformer Block
+│   │   └── kimi.py                 # Full nanoKimi model class
+│   ├── optimizer.py                # Muon optimizer / AdamW fallback
+│   ├── trainer.py                  # Training loop (PyTorch Lightning / raw PyTorch)
+│   ├── benchmark.py                # Benchmarking & profiling tools
+│   ├── utils.py                    # Helper functions
+│   └── export.py                   # Convert model to ONNX/TensorRT
+│
+├── scripts/
+│   ├── train.py                    # Training entry point
+│   ├── finetune.py                 # Fine-tuning script
+│   ├── inference.py                # Generation script
+│   ├── evaluate.py                 # Evaluation script
+│   ├── benchmark_run.sh            # Automated benchmarking runs
+│   └── convert_weights.py          # Weight conversion
+│
+├── tests/
+│   ├── test_tokenizer.py
+│   ├── test_model.py
+│   ├── test_inference.py
+│   └── test_training.py
+│
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── setup.py

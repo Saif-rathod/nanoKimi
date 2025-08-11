@@ -1,0 +1,11 @@
+dataset: data/raw/tiny_shakespeare.txt
+batch_size: 8
+epochs: 1
+lr: 1e-3
+warmup_steps: 1000
+grad_accum_steps: 1
+device: cuda
+use_fp16: false
+save_dir: out
+log_interval: 50
+seed: 42
