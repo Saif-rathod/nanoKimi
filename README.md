@@ -14,7 +14,7 @@ Minimal PyTorch implementation of the Kimi-K2 architecture (Mixture of Experts, 
 
 ```bash
 # 1. Clone & Install
-git clone https://github.com/[YourUsername]/nanoKimi.git
+git clone https://github.com/Saif-rathod/nanoKimi.git
 cd nanoKimi
 pip install -r requirements.txt
 
